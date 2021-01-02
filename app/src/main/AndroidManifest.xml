@@ -29,12 +29,12 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+        <activity android:name=".Foods" />
+        <activity android:name=".TopUpActivity" />
+        <activity android:name=".HistoryActivity" />
         <activity android:name=".OrderComplete" />
         <activity android:name=".MyOrder" />
-        <activity android:name=".DrinkOrder" />
+        <activity android:name=".OrderActivity" />
         <activity android:name=".Drinks" />
         <activity android:name=".MainActivity">
             <intent-filter>

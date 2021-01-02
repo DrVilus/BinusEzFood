@@ -19,11 +19,11 @@ public class OrderComplete extends AppCompatActivity {
         setSupportActionBar(myToolbar);
 
         totalText = findViewById(R.id.totalText);
-        totalText.setText("Total: RP " + hitungTotal());
-    }
+        totalText.setText("Total: RP " + MyOrder.hitungTotal());
 
-    int hitungTotal(){
-        return (MyOrder.air*1000 + MyOrder.pukat*5000 + MyOrder.mangga*5000);
+        MyOrder.air = 0;
+        MyOrder.pukat = 0;
+        MyOrder.mangga = 0;
     }
 
     public void onMenuBtn(View view) {

@@ -12,20 +12,19 @@ import android.widget.ImageButton;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link DrinkFragment#newInstance} factory method to
+ * Use the {@link FoodFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class DrinkFragment extends Fragment {
+public class FoodFragment extends Fragment {
 
-    public DrinkFragment() {
+    ImageButton ngb, mgb;
+    public FoodFragment() {
         // Required empty public constructor
     }
 
-    ImageButton air,pukat,mangga;
-
     // TODO: Rename and change types and number of parameters
-    public static DrinkFragment newInstance() {
-        DrinkFragment fragment = new DrinkFragment();
+    public static FoodFragment newInstance(String param1, String param2) {
+        FoodFragment fragment = new FoodFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -40,34 +39,27 @@ public class DrinkFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_drink, container, false);
-        air = view.findViewById(R.id.nasgorbtn);
-        pukat = view.findViewById(R.id.miegorbtn);
-        mangga = view.findViewById(R.id.manggaBtn);
+        View view = inflater.inflate(R.layout.fragment_food, container, false);
 
-        air.setOnClickListener(new View.OnClickListener() {
+        ngb = view.findViewById(R.id.nasgorbtn);
+        mgb = view.findViewById(R.id.miegorbtn);
+
+        ngb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                OrderActivity.id = 0;
+                OrderActivity.id = 3;
                 onOrderButton();
             }
         });
 
-        pukat.setOnClickListener(new View.OnClickListener() {
+        mgb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                OrderActivity.id = 1;
+                OrderActivity.id = 4;
                 onOrderButton();
             }
         });
 
-        mangga.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                OrderActivity.id = 2;
-                onOrderButton();
-            }
-        });
 
         return view;
     }
@@ -76,5 +68,4 @@ public class DrinkFragment extends Fragment {
         Intent intent = new Intent(getActivity(), OrderActivity.class);
         startActivity(intent);
     }
-
 }

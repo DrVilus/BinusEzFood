@@ -23,7 +23,7 @@
             android:layout_weight="1"
             android:clickable="false"
             android:scaleType="centerInside"
-            app:srcCompat="@drawable/air" />
+            app:srcCompat="@drawable/nasgor" />
 
     </LinearLayout>
 
@@ -35,7 +35,7 @@
         android:layout_marginRight="15dp"
         android:gravity="center_horizontal"
         android:paddingLeft="15dp"
-        android:text="Air Mineral"
+        android:text="Nasi Goreng"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -50,7 +50,7 @@
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="10dp"
-        android:text="RP 1000" />
+        android:text="RP 10000" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -64,10 +64,10 @@
             android:id="@+id/miegorbtn"
             android:layout_width="371dp"
             android:layout_height="139dp"
+            android:layout_marginHorizontal="100dp"
             android:layout_weight="1"
             android:scaleType="centerInside"
-            android:layout_marginHorizontal="100dp"
-            app:srcCompat="@drawable/pukat" />
+            app:srcCompat="@drawable/miegor" />
 
     </LinearLayout>
 
@@ -79,7 +79,7 @@
         android:layout_marginRight="15dp"
         android:gravity="center_horizontal"
         android:paddingLeft="15dp"
-        android:text="Jus Alpukat"
+        android:text="Mie Goreng"
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -94,51 +94,7 @@
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:paddingBottom="10dp"
-        android:text="RP 5000" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:orientation="horizontal"
-        android:paddingTop="10dp">
-
-        <ImageButton
-            android:id="@+id/manggaBtn"
-            android:layout_width="371dp"
-            android:layout_height="139dp"
-            android:layout_weight="1"
-            android:scaleType="centerInside"
-            android:layout_marginHorizontal="100dp"
-            app:srcCompat="@drawable/mangga" />
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/mangga1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:gravity="center_horizontal"
-        android:paddingLeft="15dp"
-        android:text="Jus Mangga"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/mangga2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="10dp"
-        android:gravity="center_horizontal"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:paddingBottom="10dp"
-        android:text="RP 5000" />
+        android:text="RP 10000" />
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>
