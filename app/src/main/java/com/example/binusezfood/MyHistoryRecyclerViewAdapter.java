@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.binusezfood.dummy.HistoryContent;
+import com.example.binusezfood.Content.HistoryContent;
 
 import java.util.List;
 

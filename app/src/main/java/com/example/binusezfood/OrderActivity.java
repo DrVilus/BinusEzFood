@@ -45,6 +45,14 @@ public class OrderActivity extends AppCompatActivity {
             img.setImageResource(R.drawable.miegor);
             barang.setText("Mie Goreng");
             harga.setText("RP 10000");
+        }else if(id==5){
+            img.setImageResource(R.drawable.kitkat);
+            barang.setText("Kitkat");
+            harga.setText("RP 3000");
+        }else if(id==6){
+            img.setImageResource(R.drawable.snickers);
+            barang.setText("Snickers");
+            harga.setText("RP 5000");
         }
 
     }
@@ -66,6 +74,10 @@ public class OrderActivity extends AppCompatActivity {
             MyOrder.nasgor += finalValue;
         }else if(id==4){
             MyOrder.miegor += finalValue;
+        }else if(id==5){
+            MyOrder.kitkat += finalValue;
+        }else if(id==6){
+            MyOrder.snickers += finalValue;
         }
     }
 
@@ -80,7 +92,6 @@ public class OrderActivity extends AppCompatActivity {
         String value= quant.getText().toString();
         int finalValue;
         if(value.matches("")){
-            finalValue = 0;
             Toast.makeText(getBaseContext(), "Quantity must be filled", Toast.LENGTH_SHORT).show();
         }else{
             finalValue=Integer.parseInt(value);

@@ -12,7 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.binusezfood.dummy.HistoryContent;
+import com.example.binusezfood.Content.HistoryContent;
 
 /**
  * A fragment representing a list of Items.

@@ -34,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void onSnacksButton(View view){
+        Intent intent = new Intent(this, Snacks.class);
+        startActivity(intent);
+    }
+
     public void onMyOrderBtn(View view) {
         Intent intent = new Intent(this, MyOrder.class);
         startActivity(intent);

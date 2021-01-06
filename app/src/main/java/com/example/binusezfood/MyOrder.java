@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.binusezfood.dummy.HistoryContent;
+import com.example.binusezfood.Content.HistoryContent;
 
 public class MyOrder extends AppCompatActivity {
     //Drinks
@@ -46,7 +46,7 @@ public class MyOrder extends AppCompatActivity {
     }
 
     public static int hitungTotal(){
-        return (air*1000 + pukat*5000 + mangga*5000 + nasgor*10000 + miegor*10000);
+        return (air*1000 + pukat*5000 + mangga*5000 + nasgor*10000 + miegor*10000 + kitkat*3000 + snickers*5000);
     }
 
     @Override
@@ -63,6 +63,7 @@ public class MyOrder extends AppCompatActivity {
             Toast.makeText(getBaseContext(), "Saldo tidak cukup", Toast.LENGTH_SHORT).show();
         }else{
             HistoryContent.ITEMS.add(new HistoryContent.Item(Integer.toString(HistoryContent.ITEMS.size()+1), OrderDetail(), hitungTotal()));
+            TopUpActivity.saldo-=hitungTotal();
 
             Toast.makeText(getBaseContext(), "Order Complete", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(this, OrderComplete.class);
@@ -82,6 +83,19 @@ public class MyOrder extends AppCompatActivity {
         if(mangga>0){
             detail+=("- Mangga = " + mangga+"\n");
         }
+        if(nasgor>0){
+            detail+=("- Nasi Goreng = " + nasgor+"\n");
+        }
+        if(miegor>0){
+            detail+=("- Mie Goreng = " + miegor+"\n");
+        }
+        if(kitkat>0){
+            detail+=("- Kit Kat = " + kitkat+"\n");
+        }
+        if(snickers>0){
+            detail+=("- Snickers = " + snickers+"\n");
+        }
+
 
         return detail;
     }
