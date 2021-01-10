@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <fragment
+            <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragment3"
                 android:name="com.example.binusezfood.OrderCompleteList"
                 android:layout_width="match_parent"
