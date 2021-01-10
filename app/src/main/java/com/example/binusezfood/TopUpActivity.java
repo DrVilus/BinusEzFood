@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 public class TopUpActivity extends AppCompatActivity {
 
     public static int saldo = 0;
@@ -21,7 +23,7 @@ public class TopUpActivity extends AppCompatActivity {
         this.setTitle("BinusEZFoody: Top Up");
         Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(myToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         TextView tvSaldo = findViewById(R.id.saldo);
         tvSaldo.setText("Saldo = " + saldo);
@@ -38,8 +40,10 @@ public class TopUpActivity extends AppCompatActivity {
         EditText topup = findViewById(R.id.editTextTopUp);
         String value= topup.getText().toString();
         long finalValue = 0;
-        finalValue=Integer.parseInt(value);
-        if(value.matches("")) {
+        if(!value.isEmpty()){
+            finalValue=Integer.parseInt(value);
+        }
+        if(value.isEmpty()) {
             Toast.makeText(getBaseContext(), "Top Up must be filled", Toast.LENGTH_SHORT).show();
         }else if(finalValue > 2000000){
             Toast.makeText(getBaseContext(), "Top Up must not exceed 2 000 000 ", Toast.LENGTH_SHORT).show();

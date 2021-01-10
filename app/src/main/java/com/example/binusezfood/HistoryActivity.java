@@ -5,6 +5,8 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 
+import java.util.Objects;
+
 public class HistoryActivity extends AppCompatActivity {
 
     @Override
@@ -14,7 +16,7 @@ public class HistoryActivity extends AppCompatActivity {
         this.setTitle("History");
         Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(myToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
     }
 
     @Override

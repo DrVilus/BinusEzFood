@@ -5,6 +5,8 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 
+import java.util.Objects;
+
 public class MapActivity extends AppCompatActivity {
     public static String map_location = "Automatic";
 
@@ -15,7 +17,7 @@ public class MapActivity extends AppCompatActivity {
         this.setTitle("Select Restaurant");
         Toolbar myToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(myToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
     }
 
     @Override

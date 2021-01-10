@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import com.example.binusezfood.Content.HistoryContent;
 
+import java.util.Objects;
+
 public class MyOrder extends AppCompatActivity {
     //Drinks
     public static int air = 0;
@@ -36,7 +38,7 @@ public class MyOrder extends AppCompatActivity {
         this.setTitle("BinusEZFoody: My Order");
         Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(myToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         totalTxt = findViewById(R.id.totalText);
         totalTxt.setText("Total: RP " + hitungTotal());

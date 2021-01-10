@@ -30,8 +30,8 @@ public class MyHistoryRecyclerViewAdapter extends RecyclerView.Adapter<MyHistory
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.mItem = mValues.get(position);
         holder.mIdView.setText(mValues.get(position).id);
-        holder.mContentView.setText("Details: \n"+mValues.get(position).details);
-        holder.mPriceView.setText("Price: \n"+Integer.toString(mValues.get(position).total_price));
+        holder.mContentView.setText("Details: \n"+ mValues.get(position).details);
+        holder.mPriceView.setText("Price: \nRP "+ (mValues.get(position).total_price));
         holder.mLocationView.setText("Location: \n"+mValues.get(position).location);
         holder.mDateView.setText("Date: \n"+mValues.get(position).date);
     }

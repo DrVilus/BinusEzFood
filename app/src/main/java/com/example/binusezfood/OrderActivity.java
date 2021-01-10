@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 public class OrderActivity extends AppCompatActivity {
     public static int id = 0;
     ImageView img;
@@ -23,7 +25,7 @@ public class OrderActivity extends AppCompatActivity {
         this.setTitle("BinusEZFoody: Order");
         Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(myToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         img = findViewById(R.id.nasgorbtn);
         barang = findViewById(R.id.air1);

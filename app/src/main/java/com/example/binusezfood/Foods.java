@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import java.util.Objects;
+
 public class Foods extends AppCompatActivity {
 
     @Override
@@ -16,7 +18,7 @@ public class Foods extends AppCompatActivity {
         this.setTitle("BinusEZFoody: Foods");
         Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(myToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
