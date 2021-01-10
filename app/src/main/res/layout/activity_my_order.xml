@@ -55,10 +55,20 @@
         android:layout_width="0dp"
         android:layout_height="24dp"
         android:layout_marginStart="18dp"
-        android:text="Saldo = "
+        android:text="Saldo: "
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/totalText" />
+
+    <TextView
+        android:id="@+id/lokasi"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="18dp"
+        android:text="Order Location:  "
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saldo" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -67,7 +77,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/saldo">
+        app:layout_constraintTop_toBottomOf="@+id/lokasi">
 
         <LinearLayout
             android:layout_width="match_parent"

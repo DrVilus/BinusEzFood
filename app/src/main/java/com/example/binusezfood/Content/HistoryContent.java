@@ -19,14 +19,17 @@ public class HistoryContent {
         public final String details;
         public final String date;
         public final int total_price;
+        public final String location;
 
 
         @RequiresApi(api = Build.VERSION_CODES.N)
-        public Item(String id, String details, int total_price) {
+        public Item(String id, String details, int total_price, String location) {
             this.id = id;
             this.details = details;
-            this.date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
             this.total_price = total_price;
+            this.location = location;
+            this.date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
+
         }
 
     }

@@ -42,7 +42,10 @@ public class MyOrder extends AppCompatActivity {
         totalTxt.setText("Total: RP " + hitungTotal());
 
         TextView tvSaldo = findViewById(R.id.saldo);
-        tvSaldo.setText("Saldo = " + TopUpActivity.saldo);
+        tvSaldo.setText("Saldo: RP" + TopUpActivity.saldo);
+
+        TextView locText = findViewById(R.id.lokasi);
+        locText.setText("Lokasi: " + MapActivity.map_location);
     }
 
     public static int hitungTotal(){
@@ -62,7 +65,7 @@ public class MyOrder extends AppCompatActivity {
         }else if(hitungTotal() > TopUpActivity.saldo){
             Toast.makeText(getBaseContext(), "Saldo tidak cukup", Toast.LENGTH_SHORT).show();
         }else{
-            HistoryContent.ITEMS.add(new HistoryContent.Item(Integer.toString(HistoryContent.ITEMS.size()+1), OrderDetail(), hitungTotal()));
+            HistoryContent.ITEMS.add(new HistoryContent.Item(Integer.toString(HistoryContent.ITEMS.size()+1), OrderDetail(), hitungTotal(), MapActivity.map_location));
             TopUpActivity.saldo-=hitungTotal();
 
             Toast.makeText(getBaseContext(), "Order Complete", Toast.LENGTH_SHORT).show();

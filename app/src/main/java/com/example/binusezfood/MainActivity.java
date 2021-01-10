@@ -19,7 +19,10 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(myToolbar);
 
         TextView tvSaldo = findViewById(R.id.saldo);
-        tvSaldo.setText("Saldo = " + TopUpActivity.saldo);
+        tvSaldo.setText("Saldo: RP " + TopUpActivity.saldo);
+
+        TextView order_location = findViewById(R.id.OrderLocation);
+        order_location.setText(MapActivity.map_location);
     }
 
     public void onDrinkButton(View view) {
@@ -45,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onMapBtn(View view) {
-        //Intent intent = new Intent(this, MapsActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, MapActivity.class);
+        startActivity(intent);
     }
 
     public void onHistoryBtn(View view) {
