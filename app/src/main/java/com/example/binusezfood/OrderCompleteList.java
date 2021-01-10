@@ -98,6 +98,7 @@ public class OrderCompleteList extends Fragment {
         kk2.setText(MyOrder.kitkat + " x RP 3000");
         sn2.setText(MyOrder.snickers + " x RP 5000");
 
+        MyOrder.clearList();
         return view;
     }
 }

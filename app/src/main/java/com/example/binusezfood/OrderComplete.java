@@ -25,7 +25,7 @@ public class OrderComplete extends AppCompatActivity {
         TextView saldoLeft = findViewById(R.id.saldolefttext);
         saldoLeft.setText("Saldo left: RP "+ TopUpActivity.saldo);
 
-        MyOrder.clearList();
+
     }
 
     public void onMenuBtn(View view) {
