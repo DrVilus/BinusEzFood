@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextClock;
 import android.widget.TextView;
 
 public class OrderComplete extends AppCompatActivity {
@@ -21,9 +22,10 @@ public class OrderComplete extends AppCompatActivity {
         totalText = findViewById(R.id.totalText);
         totalText.setText("Total: RP " + MyOrder.hitungTotal());
 
-        MyOrder.air = 0;
-        MyOrder.pukat = 0;
-        MyOrder.mangga = 0;
+        TextView saldoLeft = findViewById(R.id.saldolefttext);
+        saldoLeft.setText("Saldo left: RP "+ TopUpActivity.saldo);
+
+        MyOrder.clearList();
     }
 
     public void onMenuBtn(View view) {

@@ -49,14 +49,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
+    <TextView
+        android:id="@+id/saldolefttext"
+        android:layout_width="0dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="137dp"
+        android:text="Saldo Left: RP 10000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalText" />
+
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
         android:layout_height="621dp"
-        android:layout_marginTop="6dp"
         android:fillViewport="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/orderBtn">
+        app:layout_constraintTop_toBottomOf="@+id/saldolefttext">
 
         <LinearLayout
             android:layout_width="match_parent"

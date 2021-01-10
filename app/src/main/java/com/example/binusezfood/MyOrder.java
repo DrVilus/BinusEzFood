@@ -54,6 +54,16 @@ public class MyOrder extends AppCompatActivity {
         return (air*1000 + pukat*5000 + mangga*5000 + nasgor*10000 + miegor*10000 + kitkat*3000 + snickers*5000);
     }
 
+    public static void clearList(){
+        MyOrder.air = 0;
+        MyOrder.pukat = 0;
+        MyOrder.mangga = 0;
+        MyOrder.miegor = 0;
+        MyOrder.snickers = 0;
+        MyOrder.nasgor = 0;
+        MyOrder.kitkat = 0;
+    }
+
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
